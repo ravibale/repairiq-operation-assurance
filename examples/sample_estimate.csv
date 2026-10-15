@@ -1,0 +1,7 @@
+document_id,revision,vehicle_id,line_number,panel,description,labour_hours,hourly_rate_gbp
+EXAMPLE-001,1,SYNTHETIC-VEHICLE,1,front bumper,Remove and refit front bumper,2.0,65
+EXAMPLE-001,1,SYNTHETIC-VEHICLE,2,front bumper,Front bumper removal,1.1,65
+EXAMPLE-001,1,SYNTHETIC-VEHICLE,3,front bumper,Refit front bumper,1.0,65
+EXAMPLE-001,1,SYNTHETIC-VEHICLE,4,front bumper,Replace front headlamp,1.5,65
+EXAMPLE-001,1,SYNTHETIC-VEHICLE,5,front bumper,Front headlamp replacement,1.5,65
+EXAMPLE-001,1,SYNTHETIC-VEHICLE,6,front bumper,Check calibration procedure,0.5,65

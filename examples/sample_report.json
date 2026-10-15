@@ -1,0 +1,66 @@
+{
+  "prototype_status": "EXPERIMENTAL - synthetic rules, no live validation",
+  "decision_policy": "HUMAN_REVIEW_REQUIRED - flags are not invoices to be rejected",
+  "document_id": "EXAMPLE-001",
+  "revision": 1,
+  "vehicle_id": "SYNTHETIC-VEHICLE",
+  "source_file": "sample_estimate.csv",
+  "source_sha256": "b0e5711f03c19e8ac0d566699f49993f7031e5ecc23585cfa40f404145f446af",
+  "taxonomy_version": "demo-taxonomy-0.1",
+  "ruleset_version": "demo-rules-0.1",
+  "total_lines": 6,
+  "mapped_lines": 5,
+  "unmapped_line_numbers": [
+    6
+  ],
+  "findings": [
+    {
+      "finding_id": "c4d719838ba4",
+      "rule_id": "DUP-001",
+      "rule_version": "demo-rules-0.1",
+      "severity": "REVIEW",
+      "status": "POTENTIAL_OVERLAP_NOT_CONFIRMED",
+      "explanation": "Same canonical operation FRONT_HEADLAMP_REPLACE occurs multiple times on front bumper. Verify separate legitimate work before challenging.",
+      "document_id": "EXAMPLE-001",
+      "vehicle_id": "SYNTHETIC-VEHICLE",
+      "source_lines": [
+        4,
+        5
+      ],
+      "source_descriptions": [
+        "Replace front headlamp",
+        "Front headlamp replacement"
+      ],
+      "source_sha256": "b0e5711f03c19e8ac0d566699f49993f7031e5ecc23585cfa40f404145f446af",
+      "estimated_exposure_gbp": "97.5",
+      "required_evidence": "OEM repair method, operation breakdown and confirmation whether charges describe distinct work.",
+      "reviewer_decision": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "finding_id": "ecd7cb737ad3",
+      "rule_id": "OVL-002",
+      "rule_version": "demo-rules-0.1",
+      "severity": "REVIEW",
+      "status": "POTENTIAL_OVERLAP_NOT_CONFIRMED",
+      "explanation": "Bundled front bumper remove-and-refit is billed alongside one or more separate remove/refit operations; scope may overlap.",
+      "document_id": "EXAMPLE-001",
+      "vehicle_id": "SYNTHETIC-VEHICLE",
+      "source_lines": [
+        1,
+        2,
+        3
+      ],
+      "source_descriptions": [
+        "Remove and refit front bumper",
+        "Front bumper removal",
+        "Refit front bumper"
+      ],
+      "source_sha256": "b0e5711f03c19e8ac0d566699f49993f7031e5ecc23585cfa40f404145f446af",
+      "estimated_exposure_gbp": "136.5",
+      "required_evidence": "OEM procedure, insurer-approved estimate logic and itemised explanation of any distinct additional work.",
+      "reviewer_decision": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "potential_exposure_gbp": "234.0",
+  "exposure_note": "Illustrative candidate review value; may double-count overlaps and is never realised savings."
+}
